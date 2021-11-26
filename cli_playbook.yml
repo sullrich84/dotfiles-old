@@ -1,0 +1,69 @@
+---
+
+- name: Install CLIs
+  hosts: localhost
+  remote_user: root
+
+  tasks:
+    - name: Update homebrew
+      community.general.homebrew:
+        update_homebrew: yes
+        upgrade_all: yes
+
+    - name: Install Docker
+      homebrew:
+        name: docker
+        state: present
+
+    - name: Install Docker Compose
+      homebrew:
+        name: docker-compose
+        state: present
+
+    - name: Install kubectx
+      homebrew:
+        name: kubectx
+        state: present
+
+    - name: Install stern
+      homebrew:
+        name: stern
+        state: present
+
+    - name: Install Kubernetes Control
+      homebrew:
+        name: kubectl
+        state: present
+
+    - name: Install Helm
+      homebrew:
+        name: helm
+        state: present
+
+    - name: Install Terraform
+      homebrew:
+        name: terraform
+        state: present
+
+    - name: Install mkcert
+      homebrew:
+        name: mkcert
+        state: present
+
+    - name: Install Node Version Manager (nvm)
+      homebrew:
+        name: nvm
+        state: present
+
+    - name: Install jq
+      homebrew:
+        name: jq
+        state: present
+
+    - name: Install thefuck
+      homebrew:
+        name: thefuck
+        state: present
+
+    - name: Install SDKMAN!
+      shell: curl -s "https://get.sdkman.io" | bash

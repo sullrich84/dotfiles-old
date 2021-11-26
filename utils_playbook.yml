@@ -1,0 +1,15 @@
+---
+
+- name: Install Utils
+  hosts: localhost
+  remote_user: root
+
+  tasks:
+    - name: Install Hack Font
+      when: ansible_facts['os_family'] == "Darwin"
+      get_url:
+        url: https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip
+        dest: /tmp/hack_font.zip
+      unarchive:
+        src: /tmp/hack_font.zip
+        dest: /Library/Fonts

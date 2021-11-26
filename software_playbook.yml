@@ -1,0 +1,12 @@
+---
+
+- name: Install Software
+  hosts: localhost
+  remote_user: root
+
+  tasks:
+    - name: Install Amethyst (window tiling manager)
+      when: ansible_facts['os_family'] == "Darwin"
+      homebrew_cask:
+        name: amethyst
+        state: present
