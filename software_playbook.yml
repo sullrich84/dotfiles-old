@@ -2,7 +2,6 @@
 
 - name: Install Software
   hosts: localhost
-  remote_user: root
 
   tasks:
     - name: Install Amethyst (window tiling manager)

@@ -2,7 +2,6 @@
 
 - name: Install CLIs
   hosts: localhost
-  remote_user: root
 
   tasks:
     - name: Update homebrew
@@ -68,6 +67,26 @@
     - name: Install thefuck
       homebrew:
         name: thefuck
+        state: present
+
+    - name: Install TaskWarrior
+      homebrew:
+        name: task
+        state: present
+
+    - name: Install ncdu
+      homebrew:
+        name: ncdu
+        state: present
+
+    - name: Install tmux
+      homebrew:
+        name: tmux
+        state: present
+
+    - name: Install wget
+      homebrew:
+        name: wget
         state: present
 
     - name: Install SDKMAN!

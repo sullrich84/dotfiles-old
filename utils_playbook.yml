@@ -2,7 +2,6 @@
 
 - name: Install Utils
   hosts: localhost
-  remote_user: root
 
   tasks:
     - name: Download Hack Font
