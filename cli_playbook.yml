@@ -50,6 +50,11 @@
         name: mkcert
         state: present
 
+    - name: Install Node
+      homebrew:
+        name: node
+        state: present
+
     - name: Install Node Version Manager (nvm)
       homebrew:
         name: nvm
