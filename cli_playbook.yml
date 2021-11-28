@@ -43,6 +43,11 @@
       homebrew:
         name: terraform
         state: present
+        
+    - name: Install Dive
+      homebrew:
+        name: dive
+        state: present
 
     - name: Install mkcert
       homebrew:
