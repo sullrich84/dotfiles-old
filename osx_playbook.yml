@@ -1,0 +1,10 @@
+---
+
+- name: OSX Tweaks
+  hosts: localhost
+
+  tasks:
+    - name: Disable mouse acceleration
+      ansible.builtin.shell: defaults write .GlobalPreferences com.apple.mouse.scaling -1
+
+    -

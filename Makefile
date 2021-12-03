@@ -1,4 +1,4 @@
-plays := cli_playbook.yml ide_playbook.yml software_playbook.yml utils_playbook.yml
+plays := cli_playbook.yml ide_playbook.yml software_playbook.yml utils_playbook.yml osx_playbook.yml
 
 install:
 	ansible-galaxy collection install community.general
