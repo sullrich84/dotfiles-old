@@ -5,13 +5,14 @@
 
 .PHONY: copy
 
+# Config Folders
+LUNARVIM_CONFIG := ~/.config/lvim
+KITTY_CONFIG := ~/.config/kitty
+
+# Config Files
 STARSHIP_CONFIG := ~/.config/starship.toml
-HYPER_CONFIG := ~/.hyper.js
-LUNARVIM_CONFIG := ~/.config/lvim/config.lua
-OSX_CONFIG := ~/osx.config
 
 receive:
+	cp -r ${LUNARVIM_CONFIG} lvim
+	cp -r ${KITTY_CONFIG} kitty
 	cp ${STARSHIP_CONFIG} starship.toml
-	cp ${HYPER_CONFIG} hyper.js
-	cp ${LUNARVIM_CONFIG} config.lua
-	cp ${OSX_CONFIG} osx.config 
