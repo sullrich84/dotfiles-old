@@ -4,7 +4,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "bash",
+        -- "bash",
         "help",
         "html",
         "javascript",
